@@ -20,15 +20,15 @@ class App extends Component {
       <Router>
         <div>
           <Navbar />
-          <Route exact path="/" component={Home} />
-          <Route exact path="/login" component={Login} />
-          <Route exact path="/register" component={Register} />
-          <Route exact path="/apply-for-program" component={ApplyForProgram} />
-          <Route exact path="/profile" component={Profile} />
-          <Route exact path="/receive-answers" component={ReceiveTasks} />
-          <Route exact path="/send-tasks" component={SendTasks} />
-          <Route exact path="/contact-us" component={ContactUs} />
-          <Route exact path="/task-sent" component={TaskSent} />
+          <Route exact path={process.env.PUBLIC_URL + "/"} component={Home} />
+          <Route exact path={process.env.PUBLIC_URL + "/login"} component={Login} />
+          <Route exact path={process.env.PUBLIC_URL + "/register"} component={Register} />
+          <Route exact path={process.env.PUBLIC_URL + "/apply-for-program"} component={ApplyForProgram} />
+          <Route exact path={process.env.PUBLIC_URL + "/profile"} component={Profile} />
+          <Route exact path={process.env.PUBLIC_URL + "/receive-answers"} component={ReceiveTasks} />
+          <Route exact path={process.env.PUBLIC_URL + "/send-tasks"} component={SendTasks} />
+          <Route exact path={process.env.PUBLIC_URL + "/contact-us"} component={ContactUs} />
+          <Route exact path={process.env.PUBLIC_URL + "/task-sent"} component={TaskSent} />
         </div>
       </Router>
     );
