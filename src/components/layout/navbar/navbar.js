@@ -61,7 +61,7 @@ export class navbar extends Component {
               spacing={24}
             >
               <Grid item xs={1}>
-                <Link to="/login" className={classes.link}>
+                <Link to={process.env.PUBLIC_URL+"/login"} className={classes.link}>
                   <Button
                     variant="contained"
                     color="secondary"
@@ -76,7 +76,7 @@ export class navbar extends Component {
               </Grid>
 
               <Grid item xs={1}>
-                <Link to="/register" className={classes.link}>
+                <Link to={process.env.PUBLIC_URL+"/register"} className={classes.link}>
                   <Button
                     variant="contained"
                     color="primary"
@@ -91,7 +91,7 @@ export class navbar extends Component {
                 </Link>
               </Grid>
               <Grid item xs={1}>
-                <Link to="/contact-us" className={classes.link}>
+                <Link to={process.env.PUBLIC_URL+"/contact-us"} className={classes.link}>
                   <Button
                     variant="contained"
                     color="primary"
@@ -106,7 +106,7 @@ export class navbar extends Component {
                 </Link>
               </Grid>
               <Grid item xs={1}>
-                <Link to="/" className={classes.link}>
+                <Link to={process.env.PUBLIC_URL+"/"} className={classes.link}>
                   <IconButton aria-label="home">
                     <HomeIcon className={classes.icon} />
                   </IconButton>

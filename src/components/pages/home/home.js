@@ -57,7 +57,7 @@ export class home extends Component {
           <Grid item xs={6} sm={3} />
           <Grid item xs={6} sm={4} />
           <Grid item xs={6} sm={3}>
-            <Link to="/apply-for-program" className={classes.link}>
+            <Link to={process.env.PUBLIC_URL+"/apply-for-program"} className={classes.link}>
               <Button
                 variant="contained"
                 color="secondary"

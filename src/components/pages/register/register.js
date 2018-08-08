@@ -90,7 +90,7 @@ export class register extends Component {
           <CardActions>
             <Grid item xs={1} xm={1} />
             <Grid item xs={3} xm={3}>
-              <Link to="/" className={classes.link}>
+              <Link to={process.env.PUBLIC_URL+"/"} className={classes.link}>
                 <Button
                   variant="raised"
                   color="secondary"
