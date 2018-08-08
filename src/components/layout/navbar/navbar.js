@@ -1,24 +1,32 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
-import { withStyles } from "@material-ui/core/styles";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Button from "@material-ui/core/Button";
 import HomeIcon from "@material-ui/icons/Home";
-import IconButton from "@material-ui/core/IconButton";
+
+import PropTypes from "prop-types";
+
 import classNames from "classnames";
-import Typography from "@material-ui/core/Typography";
 
 import { Link } from "react-router-dom";
+import {
+  Button,
+  Grid,
+  withStyles,
+  Toolbar,
+  AppBar,
+  Typography,
+  IconButton
+} from "@material-ui/core";
+
 const styles = theme => ({
   root: {
     flexGrow: 1
   },
   button: {
-    margin: theme.spacing.unit
+    margin: theme.spacing.unit,
+    minWidth: 60,
+    background: "#E0415D"
   },
   icon: {
-    margin: theme.spacing.unit,
+    margin: theme.spacing.unit
   },
   loginbutton: {
     background: "#E0415D"
@@ -32,14 +40,10 @@ const styles = theme => ({
   link: {
     "text-decoration-line": "none"
   },
-  title:{
-    // marginRight:"15px",
-    // marginLeft:"-40px",
-    color:"#E0415D",
-    "text-align":"left",
-    width:"75%"
-
-
+  title: {
+    color: "#E0415D",
+    "text-align": "left",
+    margin: theme.spacing.unit
   }
 });
 export class navbar extends Component {
@@ -50,35 +54,116 @@ export class navbar extends Component {
       <div className={classes.root} dir="rtl">
         <AppBar position="static" color="inherit">
           <Toolbar>
-            <Link to="/login" className={classes.link}>
+            <Grid
+              container
+              alignContent="space-around"
+              direction="row"
+              spacing={24}
+            >
+              <Grid item xs={1}>
+                <Link to="/login" className={classes.link}>
+                  <Button
+                    variant="contained"
+                    color="secondary"
+                    className={
+                      classNames(classes.button, classes.loginbutton) + "button"
+                    }
+                    fullWidth="true"
+                  >
+                    تسجيل الدخول
+                  </Button>
+                </Link>
+              </Grid>
+
+              <Grid item xs={1}>
+                <Link to="/register" className={classes.link}>
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    className={classNames(
+                      classes.button,
+                      classes.registerbutton
+                    )}
+                    fullWidth="true"
+                  >
+                    حساب جديد
+                  </Button>
+                </Link>
+              </Grid>
+              <Grid item xs={1}>
+                <Link to="/contact-us" className={classes.link}>
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    className={classNames(
+                      classes.button,
+                      classes.contactbutton
+                    )}
+                    fullWidth="true"
+                  >
+                    تواصل معنا
+                  </Button>
+                </Link>
+              </Grid>
+              <Grid item xs={1}>
+                <Link to="/" className={classes.link}>
+                  <IconButton aria-label="home">
+                    <HomeIcon className={classes.icon} />
+                  </IconButton>
+                </Link>
+              </Grid>
+              {/* <Grid item xs={6}/> */}
+
+              <Grid item xs>
+                <Typography
+                  variant="headline"
+                  color="inherit"
+                  className={classes.title}
+                  centered
+                >
+                  Forty Days
+                </Typography>
+              </Grid>
+              {/* <Link to="/login" className={classes.link}>
               <Button
                 variant="contained"
                 color="secondary"
                 className={
                   classNames(classes.button, classes.loginbutton) + "button"
                 }
+                fullWidth="true"
+
               >
                 تسجيل الدخول
               </Button>
             </Link>
+            <h1>  .</h1>
             <Link to="/register" className={classes.link}>
               <Button
                 variant="contained"
                 color="primary"
                 className={classNames(classes.button, classes.registerbutton)}
+                fullWidth="true"
+
               >
                 حساب جديد
               </Button>
             </Link>
+            <h1>  .</h1>
+
             <Link to="/contact-us" className={classes.link}>
               <Button
                 variant="contained"
                 color="primary"
                 className={classNames(classes.button, classes.contactbutton)}
+                fullWidth="true"
+
               >
                 تواصل معنا
               </Button>
             </Link>
+            <h1>  .</h1>
+
             <Link to="/" className={classes.link}>
               <IconButton className={classes.button} aria-label="home">
                 <HomeIcon className={classes.icon} />
@@ -86,7 +171,8 @@ export class navbar extends Component {
             </Link>
             <Typography variant="headline" color="inherit" className={classes.title} centered >
             Forty Days
-            </Typography>
+            </Typography> */}
+            </Grid>
           </Toolbar>
         </AppBar>
       </div>
