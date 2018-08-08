@@ -83,7 +83,7 @@ export class login extends Component {
           </CardContent>
           <CardActions>
             <Grid item xs={6} xm={2}>
-              <Link to={process.env.PUBLIC_URL+"/"} className={classes.link}>
+              <Link to={process.env.PUBLIC_URL + "/"} className={classes.link}>
                 <Button
                   variant="raised"
                   color="secondary"
@@ -96,7 +96,10 @@ export class login extends Component {
             </Grid>
             <Grid item xs={1} xm={1} />
             <Grid item xs={6} xm={12}>
-              <Link to={process.env.PUBLIC_URL+"/register"} className={classes.link}>
+              <Link
+                to={process.env.PUBLIC_URL + "/register"}
+                className={classes.link}
+              >
                 <Button
                   variant="raised"
                   color="primary"
